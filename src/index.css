@@ -25,6 +25,7 @@ ol {
   margin: 0;
   list-style-type: decimal;
 }
+
 ol li {
   font-weight: 900;
 }

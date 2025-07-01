@@ -606,6 +606,16 @@ p {
   line-height: 1.75rem;
 }
 
+ol {
+  padding-left: 20px;
+  margin: 0;
+  list-style-type: decimal;
+}
+
+ol li {
+  font-weight: 900;
+}
+
 pre {
   font-size: 14px;
 }
@@ -656,6 +666,7 @@ blockquote:after {
   background-color: #222;
   color: #fff;
 }
+
 ```
 
 2. `post.module.css`
@@ -898,6 +909,3 @@ You should see a page exactly like the one you’re reading right now — with a
 
 The [MutationObserver API](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver) can be a powerful tool—but like any tool, it’s best used when the need truly arises. For static or idempotent content, a one-time scan is usually enough. But for dynamic content, this approach gives you flexibility and power with minimal coupling to external rendering cycles.
 
-```
-
-```
