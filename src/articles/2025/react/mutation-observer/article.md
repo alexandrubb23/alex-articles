@@ -4,7 +4,7 @@ date: '2025-06-26'
 topic: 'React'
 ---
 
-![MutationObserver](https://alexandrub.s3.us-east-1.amazonaws.com/clean-feature-branches.webp)
+![MutationObserver](https://alexandrub.s3.us-east-1.amazonaws.com/mutation-observer.png)
 
 _Enhance code blocks in your blog using MutationObserver and React_
 
@@ -274,7 +274,8 @@ export default defineConfig({
 
 ```bash
 mkdir -p src/articles/2025/react/mutation-observer/ && \
-curl -o src/articles/2025/react/mutation-observer/article.md https://raw.githubusercontent.com/alexandrubb23/alex-articles/refs/heads/main/src/articles/2025/react/mutation-observer/article.md
+curl -o src/articles/2025/react/mutation-observer/article.md https://raw.githubusercontent.com/alexandrubb23/alex-articles/abc123/src/articles/2025/react/mutation-observer/article.md
+
 
 ```
 
