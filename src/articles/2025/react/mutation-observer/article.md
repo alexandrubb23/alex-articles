@@ -171,10 +171,6 @@ We’ll create a full Vite-powered [React](https://react.dev/) app and simulate 
 
 TLDR:
 
-```bash
-git clone repository/url
-```
-
 ## Step-by-Step Guide
 
 1. Create a ViteJS App
@@ -186,9 +182,7 @@ npm create vite@latest
 Name the project blog, select React with TypeScript.
 
 ```bash
-cd blog &&
-npm i &&
-npm run dev
+cd blog && npm i && npm run dev
 ```
 
 2. Add API Plugin
@@ -279,7 +273,9 @@ export default defineConfig({
 3. Create Dummy Article File
 
 ```bash
-mkdir -p src/articles/2025/react/mutation-observer
+mkdir -p src/articles/2025/react/mutation-observer/ && \
+curl -o src/articles/2025/react/mutation-observer/article.md https://raw.githubusercontent.com/alexandrubb23/alex-articles/refs/heads/main/src/articles/2025/react/mutation-observer/article.md
+
 ```
 
 Download `article.md` and place it inside the above folder.
@@ -574,6 +570,12 @@ const CopyButtonsInjector = () => {
 export default CopyButtonsInjector;
 ```
 
+Install Chakra UI:
+
+```bash
+npm i @chakra-ui/react
+```
+
 ## Style the Page
 
 Replace `index.css`, add `post.module.css`, `prism-themes.css`.
@@ -854,9 +856,42 @@ const App = () => (
 export default App;
 ```
 
-## The result
+## Get Rid of TypeScript Errors
 
-You should see a page exactly like this you have just read...
+1. Open `tsconfig.app.json` and add the following:
+
+```json
+{
+  "compilerOptions": {
+    ...
+    "paths": {
+      "~/*": ["./src/*"]
+    }
+  },
+}
+```
+
+2. Install Node.js types:
+
+```bash
+npm i --save-dev @types/node  
+```
+
+3. Run the App
+
+```bash
+npm run dev
+```
+
+4. And visit
+
+```bash
+http://localhost:5173/
+```
+
+## 🎉 The Result
+
+You should see a page exactly like the one you’re reading right now — with a smile on your face 😊
 
 ## 🧩 Final Thoughts
 
